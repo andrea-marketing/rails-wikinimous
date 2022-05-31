@@ -1,0 +1,8 @@
+<h1>  <%= @article.title %>
+      <small> <%= link_to ("<i class='fa-regular fa-trash-can'></i>").html_safe, article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %> </small>
+      <small> <%= link_to ("<i class='fa-solid fa-pencil'></i>").html_safe, edit_article_path %> </small>
+      </h1>
+
+ <p> <%= @article.content %></p>
+
+<%= link_to ("<i class='fa-solid fa-rotate-left'></i>Back to articles").html_safe, articles_path %>
